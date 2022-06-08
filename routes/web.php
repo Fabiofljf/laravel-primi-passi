@@ -31,7 +31,7 @@ Route::get('/home', function () {
 });
 
 Route::get('/altrapagina', function () {
-    $navBarr =[
+    $navBarr = [
         [
             'link' => 'Home',
             'href' => '/home'
@@ -41,5 +41,7 @@ Route::get('/altrapagina', function () {
             'href' => '/altrapagina'
         ]
     ];
-    return view('altrapagina', compact('navBarr'));
+    $testo = 'Ciao';
+    $nome = 'Fabio';
+    return view('altrapagina', compact('navBarr', 'testo', 'nome'));
 });
