@@ -13,14 +13,33 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('home');
-// });
+Route::get('/home', function () {
+    $navBarr =[
+            [
+                'link' => 'Home',
+                'href' => '/home'
+            ],
+            [
+                'link' => 'Altrapagina',
+                'href' => '/altrapagina'
+            ]
+        ];
 
-Route::get('/', function () {
-    $contents = [
-        "name" => "Fabio",
-        "text" => "Ciao"
+        
+    return view('home', compact('navBarr'));
+
+});
+
+Route::get('/altrapagina', function () {
+    $navBarr =[
+        [
+            'link' => 'Home',
+            'href' => '/home'
+        ],
+        [
+            'link' => 'Altrapagina',
+            'href' => '/altrapagina'
+        ]
     ];
-    return view('altrapagina', ["contents"=>$contents]);
+    return view('altrapagina', compact('navBarr'));
 });

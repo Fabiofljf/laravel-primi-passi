@@ -28,20 +28,40 @@
                 background-color: #636b6f;
                 color: #fff;
             }
+            ul{
+                height: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            li{
+                list-style-type: none;
+                margin-left: 10px;
+            }
+            a{
+                text-decoration: none;
+                color: #fff;
+            }
         </style>
     </head>
     <body>
 
         <header id="site_header">
-            
+            <ul>
+                @foreach ($navBarr as $nav)
+                <li>
+                    <a href="{{$nav['href']}}">
+                        {{$nav['link']}}
+                    </a>
+                </li>
+                @endforeach
+            </ul>
         </header>
         <!-- /#site_header -->
 
         <main id="site_main">
             <h1 class="text-center">Hello, io sono l'altra pagina!</h1>
-            @foreach ($contents as $content)
-                <h2>{{$content->text}} {{$content->nome}}</h2>
-            @endforeach
+            
         </main>
         <!-- /#site_main -->
     </body>

@@ -24,8 +24,21 @@
                 text-align: center;
             }
             #site_header{
-                height: 100px;
                 background-color: #636b6f;
+                color: #fff;
+            }
+            ul{
+                height: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            li{
+                list-style-type: none;
+                margin-left: 10px;
+            }
+            a{
+                text-decoration: none;
                 color: #fff;
             }
         </style>
@@ -33,7 +46,15 @@
     <body>
 
         <header id="site_header">
-
+            <ul>
+                @foreach ($navBarr as $nav)
+                <li>
+                    <a href="{{$nav['href']}}">
+                        {{$nav['link']}}
+                    </a>
+                </li>
+                @endforeach
+            </ul>
         </header>
         <!-- /#site_header -->
 
