@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel - Home</title>
+        <title>Laravel - Altrapagina</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
@@ -20,10 +20,10 @@
                 margin: 0;
             }
 
-            .text-center{
+            .text-center {
                 text-align: center;
             }
-            #site_header{
+            #site_header {
                 height: 100px;
                 background-color: #636b6f;
                 color: #fff;
@@ -33,12 +33,15 @@
     <body>
 
         <header id="site_header">
-
+            
         </header>
         <!-- /#site_header -->
 
         <main id="site_main">
-            <h1 class="text-center">Hello Laravel!</h1>
+            <h1 class="text-center">Hello, io sono l'altra pagina!</h1>
+            @foreach ($contents as $content)
+                <h2>{{$content->text}} {{$content->nome}}</h2>
+            @endforeach
         </main>
         <!-- /#site_main -->
     </body>
