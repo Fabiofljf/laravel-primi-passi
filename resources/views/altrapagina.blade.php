@@ -62,7 +62,7 @@
         <main id="site_main">
             <h1 class="text-center">Hello, io sono l'altra pagina!</h1>
             <h2 class="text-center">
-                {{testo}} {{nome}} !
+                {{$testo}} {{$nome}} !
             </h2>
         </main>
         <!-- /#site_main -->
